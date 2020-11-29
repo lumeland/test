@@ -8,12 +8,12 @@ site.ignore("lume");
 
 site.script(
   "multi",
-  "rm -rf newdir",
   "mkdir newdir",
   "cd newdir",
   "touch newfile",
   "ls -al",
   "cd ..",
+  "rm -rf newdir",
 );
 
 site.script(
