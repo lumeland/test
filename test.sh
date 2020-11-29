@@ -1,2 +1,2 @@
-deno run --unstable -A https://raw.githubusercontent.com/lumeland/lume/master/cli.js
+deno run --unstable -A lume/cli.js
 git diff --no-index _expected _site > diff

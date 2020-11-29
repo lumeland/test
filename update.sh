@@ -1,2 +1,2 @@
-deno run --unstable -A https://raw.githubusercontent.com/lumeland/lume/master/cli.js --dest ./_expected
+deno run --unstable -A lume/cli.js --dest ./_expected
 sh test.sh

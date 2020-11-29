@@ -1,4 +1,4 @@
-import lume from "../lume/mod.js";
+import lume from "lume/mod.js";
 
 const site = lume({
   prettyUrls: false,
