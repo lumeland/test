@@ -18,5 +18,6 @@ jobs:
 
       - name: Testing
         run: |
+          git clone https://github.com/lumeland/lume.git
           sh test.sh
           cat diff
