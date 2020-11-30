@@ -16,11 +16,13 @@ site.script(
   "rm -rf newdir",
 );
 
-site.script(
-  "log",
-  () => Deno.writeTextFile(site.dest("hello.txt"), "Hello world"),
-);
+site.script("log", function (site) {
+  Deno.writeTextFile(
+    site.dest("hello.txt"),
+    `Hello world\n${site.flags.join(", ")}`,
+  );
+});
 
-site.addEventListener("afterBuild", "log")
+site.addEventListener("afterBuild", "log");
 
 export default site;
