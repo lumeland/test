@@ -17,8 +17,11 @@ site.script(
 );
 
 site.script("log", function (site) {
+  const flags = site.flags;
+  const name = flags.shift();
+
   Deno.writeTextFile(
-    site.dest("hello.txt"),
+    site.dest(`${name}.txt`),
     `Hello world\n${site.flags.join(", ")}`,
   );
 });
