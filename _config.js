@@ -1,8 +1,11 @@
 import lume from "./lume/mod.js";
+import pug from "./lume/plugins/pug.js";
 
 const site = lume({
   prettyUrls: false,
 });
+
+site.use(pug());
 
 site.ignore("lume");
 
