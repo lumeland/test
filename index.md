@@ -4,3 +4,5 @@ title: Hello world
 ---
 
 # Hello world
+
+[link](#foo){target=_blank}
