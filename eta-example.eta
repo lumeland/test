@@ -1,0 +1,4 @@
+---
+name: Timothy
+---
+<p><%= name %>'s Eta source code!</p>

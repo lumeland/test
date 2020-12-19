@@ -1,11 +1,13 @@
 import lume from "./lume/mod.js";
 import pug from "./lume/plugins/pug.js";
+import eta from "./lume/plugins/eta.js";
 
 const site = lume({
   prettyUrls: false,
 });
 
 site.use(pug());
+site.use(eta());
 
 site.ignore("lume");
 
