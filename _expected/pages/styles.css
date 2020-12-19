@@ -1,0 +1,11 @@
+
+body {
+    background: white;
+    color: black;
+}
+button.primary {
+    background: blue;
+}
+button.secondary {
+    background: gray;
+}
