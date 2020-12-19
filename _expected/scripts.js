@@ -1,2 +1,1 @@
-
-const apiKey = "foo";
+const apiKey = {"bar":"foo","foo":"bar"};

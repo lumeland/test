@@ -1,4 +1,6 @@
 ---
-apiKey: "foo"
+apiKey:
+  bar: foo
+  foo: bar
 ---
-const apiKey = "{{ apiKey }}";
+const apiKey = {{ apiKey | dump | safe }};
