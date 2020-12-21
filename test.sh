@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+# Run tests
+deno test --unstable --allow-read
+
 # Execute a command
 deno run --unstable -A lume/cli.js --run multi
 

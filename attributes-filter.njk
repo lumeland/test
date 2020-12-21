@@ -1,0 +1,14 @@
+---
+attrs:
+  href: "https://example.com"
+  download: false
+  title: 'Title with "quotes" & <other characteres>'
+  disabled: true
+  class:
+    - foo
+    - bar
+    - none: false
+    - yep: true
+---
+<a {{ attrs | attr | safe }}></a>
+<a {{ attrs | attr("href", "class", "download") | safe }}></a>

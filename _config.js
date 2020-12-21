@@ -4,12 +4,13 @@ import eta from "./lume/plugins/eta.js";
 
 const site = lume({
   prettyUrls: false,
+  location: new URL("https://example-site.com/subdirectory")
 });
 
 site.use(pug());
 site.use(eta());
 
-site.ignore("lume");
+site.ignore("lume", "tests");
 
 site.script(
   "multi",

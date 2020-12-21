@@ -14,3 +14,12 @@ title: Hello world
 ```
 <p>Example without color highlight</p>
 ```
+
+## Testing urls
+
+[url](/bar)
+[url](foo)
+[url](./foo)
+[url](../foo)
+[url](#foo)
+[url](?foo=bar)
