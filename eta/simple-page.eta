@@ -1,0 +1,6 @@
+---
+title: Eta example
+name: Timothy
+layout: layouts/basic.eta
+---
+<p><%= name %>'s Eta source code!</p>

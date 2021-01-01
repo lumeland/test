@@ -1,0 +1,13 @@
+---
+color: blue
+backgroundColor: "#333"
+permalink: styles/from-eta.css
+---
+
+body {
+  color: <%= color %>;
+
+  & p {
+    background-color: <%= backgroundColor %>;
+  }
+}

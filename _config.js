@@ -1,6 +1,8 @@
 import lume from "./lume/mod.js";
 import pug from "./lume/plugins/pug.js";
 import eta from "./lume/plugins/eta.js";
+import css from "./lume/plugins/css.js";
+import inline from "./lume/plugins/inline.js";
 
 const site = lume({
   prettyUrls: false,
@@ -9,6 +11,8 @@ const site = lume({
 
 site.use(pug());
 site.use(eta());
+site.use(css());
+site.use(inline());
 
 site.ignore("lume", "tests");
 

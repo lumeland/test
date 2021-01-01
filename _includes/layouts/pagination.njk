@@ -1,0 +1,19 @@
+---
+layout: layouts/basic.njk
+---
+
+<p>
+{{ pagination.totalResults }} results found <br>
+Page {{ pagination.page }} of {{ pagination.totalPages }}
+</p>
+
+<a href="{{ pagination.previous | url }}">Previous page</a>
+<a href="{{ pagination.next | url }}">Next page</a>
+
+<ul>
+{% for page in results %}
+  <li>
+    <a href="{{ page.data.url | url }}">{{ page.data.title }}</a>
+  </li>
+{% endfor %}
+</ul>
