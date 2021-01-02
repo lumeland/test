@@ -16,6 +16,8 @@ site.use(inline());
 
 site.ignore("lume", "tests");
 
+site.filter("returnAsync", (text) => Promise.resolve(`${text} (async)`), true);
+
 site.script(
   "multi",
   "mkdir newdir",

@@ -1,0 +1,8 @@
+---
+title: Eta using filters
+name: Timothy
+layout: layouts/basic.eta
+---
+<a href="<%= filters.url("/") %>">Go to home</a>
+
+<p><%= await filters.returnAsync(name) %>'s Eta source code!</p>
