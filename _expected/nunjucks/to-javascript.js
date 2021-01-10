@@ -1,10 +1,2 @@
-const apiKey = {"bar":"foo","foo":"bar"};
-
-const urls = [
-  "/subdirectory/bar",
-  "/subdirectory/foo",
-  "./foo",
-  "../foo",
-  "https://example-site.com/subdirectory/foo",
-  "https://example.com/bar/foo",
-];
+console.log({apiKey:{bar:"foo",foo:"bar"},urls:["/subdirectory/bar","/subdirectory/foo","./foo","../foo","https://example-site.com/subdirectory/foo","https://example.com/bar/foo"]});
+//# sourceMappingURL=to-javascript.js.map

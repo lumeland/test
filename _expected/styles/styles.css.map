@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../styles/styles.css"],"names":[],"mappings":"AAAA;EACE;AAKF;AAHE;IACE,wBAAwB;EAC1B","file":"styles.css","sourcesContent":["body {\n  color: green;\n\n  & p {\n    background-color: yellow;\n  }\n}\n"]}

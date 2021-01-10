@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../nunjucks/to-styles.css.njk"],"names":[],"mappings":"AAAA;IACI,iBAAiB;IACjB,YAAY;AAChB;AACA;IACI,gBAAgB;AACpB;AACA;IACI,gBAAgB;AACpB","file":"to-styles.css","sourcesContent":["body {\n    background: white;\n    color: black;\n}\nbutton.primary {\n    background: blue;\n}\nbutton.secondary {\n    background: gray;\n}\n"]}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../styles/from-eta.eta"],"names":[],"mappings":";AACA;EACE;AAKF;AAHE;IACE,sBAAsB;EACxB","file":"from-eta.css","sourcesContent":["\nbody {\n  color: blue;\n\n  & p {\n    background-color: #333;\n  }\n}\n"]}
