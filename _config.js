@@ -1,20 +1,21 @@
 import lume from "./lume/mod.js";
 import pug from "./lume/plugins/pug.js";
 import eta from "./lume/plugins/eta.js";
-import css from "./lume/plugins/css.js";
+import postcss from "./lume/plugins/postcss.js";
 import terser from "./lume/plugins/terser.js";
 import inline from "./lume/plugins/inline.js";
 
 const site = lume({
   prettyUrls: false,
-  location: new URL("https://example-site.com/subdirectory")
+  location: new URL("https://example-site.com/subdirectory"),
 });
 
-site.use(pug());
-site.use(eta());
-site.use(css({ map: true }));
-site.use(inline());
-site.use(terser({ sourceMap: true }));
+site
+  .use(pug())
+  .use(eta())
+  .use(postcss({ map: true }))
+  .use(terser({ map: true }))
+  .use(inline());
 
 site.ignore("lume", "tests");
 
