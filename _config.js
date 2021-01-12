@@ -13,8 +13,8 @@ const site = lume({
 site
   .use(pug())
   .use(eta())
-  .use(postcss({ map: true }))
-  .use(terser({ map: true }))
+  .use(postcss({ sourceMap: true }))
+  .use(terser({ sourceMap: true }))
   .use(inline());
 
 site.ignore("lume", "tests");
