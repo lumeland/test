@@ -1,8 +1,11 @@
-import { assertEquals } from "../lume/deps/asserts.js";
-import filter from "../lume/filters/classname.js";
+import { assert, assertEquals } from "../lume/deps/asserts.js";
+import lume from "../lume/mod.js";
 
 Deno.test("classname filter", () => {
-  const className = filter();
+  const site = lume();
+  const [className] = site.filters.get("class");
+
+  assert(site.filters.has("class"));
 
   assertEquals("one two", className("one", "two"));
   assertEquals("one", className("one", null));

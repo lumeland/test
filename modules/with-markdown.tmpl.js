@@ -7,5 +7,5 @@ export default function ({ title }) {
 # ${title}
 
 [Back to home](/)
-`
+`;
 }

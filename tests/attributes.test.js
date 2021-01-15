@@ -1,8 +1,11 @@
-import { assertEquals } from "../lume/deps/asserts.js";
-import filter from "../lume/filters/attributes.js";
+import { assert, assertEquals } from "../lume/deps/asserts.js";
+import lume from "../lume/mod.js";
 
 Deno.test("attributes filter", () => {
-  const attributes = filter();
+  const site = lume();
+  const [attributes] = site.filters.get("attr");
+
+  assert(site.filters.has("attr"));
 
   assertEquals("one two", attributes(["one", "two"]));
   assertEquals('one="two"', attributes({ one: "two" }));
@@ -56,18 +59,6 @@ Deno.test("attributes filter", () => {
     attributes(
       ["required", { class: "foo" }, { id: "one", title: "bar" }],
       "id",
-    ),
-  );
-});
-
-Deno.test("attributes filter with predefined valid names", () => {
-  const attributes = filter();
-
-  assertEquals(
-    'href="/" class="foo" title="bar"',
-    attributes(
-      [{ href: "/" }, "required", { class: "foo" }, { title: "bar" }],
-      "A",
     ),
   );
 });
