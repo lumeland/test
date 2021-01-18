@@ -2,5 +2,6 @@
 title: Eta example
 name: Timothy
 layout: layouts/basic.eta
+parent: /navigation/root.html
 ---
 <p><%= name %>'s Eta source code!</p>
