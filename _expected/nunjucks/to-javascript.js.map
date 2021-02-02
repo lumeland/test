@@ -1,1 +1,1 @@
-{"version":3,"sources":["0"],"names":["console","log","apiKey","bar","foo","urls"],"mappings":"AAWAA,QAAQC,IAAI,CAAEC,OAXC,CAACC,IAAM,MAAMC,IAAM,OAWZC,KATT,CACX,oBACA,oBACA,QACA,SACA,4CACA","file":"/nunjucks/to-javascript.js"}
+{"version":3,"sources":["0"],"names":["console","log","apiKey","bar","foo","urls"],"mappings":"AAUAA,QAAQC,IAAI,CAAEC,OATC,CAAEC,IAAO,MAAOC,IAAO,OAShBC,KART,CACT,oBACA,oBACA,QACA,SACA,4CACA","file":"/nunjucks/to-javascript.js"}
