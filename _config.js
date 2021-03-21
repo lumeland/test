@@ -5,6 +5,7 @@ import postcss from "./lume/plugins/postcss.js";
 import terser from "./lume/plugins/terser.js";
 import bundler from "./lume/plugins/bundler.js";
 import inline from "./lume/plugins/inline.js";
+import svg from "./lume/plugins/svg.js";
 
 const site = lume({
   prettyUrls: false,
@@ -15,6 +16,7 @@ site
   .use(pug())
   .use(eta())
   .use(bundler())
+  .use(svg())
   .use(postcss({ sourceMap: true }))
   .use(terser({ sourceMap: true }))
   .use(inline());
