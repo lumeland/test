@@ -35,6 +35,9 @@ site.script(
   "rm -rf newdir",
 );
 
+site.copy("/assets/robots_config", "/robots.txt");
+site.copy("/assets/img", "/pictures");
+
 site.script("log", function (site) {
   const flags = site.flags;
   const name = flags.shift();
