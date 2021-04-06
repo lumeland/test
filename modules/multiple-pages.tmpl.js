@@ -7,7 +7,7 @@ export default function* () {
 
   for (const page of pages) {
     yield {
-      permalink: `modules/multiple-pages/${page}`,
+      url: `modules/multiple-pages/${page}`,
       content: `Sync page ${page}`,
     };
   }

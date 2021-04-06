@@ -1,7 +1,7 @@
 ---
 color: blue
 backgroundColor: "#333"
-permalink: styles/from-eta.css
+url: styles/from-eta.css
 ---
 
 body {

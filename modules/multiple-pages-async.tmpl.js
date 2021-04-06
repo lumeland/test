@@ -9,7 +9,7 @@ export default async function* () {
       setTimeout(() =>
         res({
           title: `Multiple pages example ${page}`,
-          permalink: `modules/multiple-pages-async/${page}`,
+          url: `modules/multiple-pages-async/${page}`,
           content: `Async Page ${page}`,
         }), 100)
     );

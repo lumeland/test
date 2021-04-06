@@ -1,1 +1,1 @@
-export const permalink = (page) => `permalinks/${page.data.title}`;
+export const url = (page) => `permalinks/${page.data.title}`;
