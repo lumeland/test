@@ -6,6 +6,9 @@ import terser from "./lume/plugins/terser.js";
 import bundler from "./lume/plugins/bundler.js";
 import inline from "./lume/plugins/inline.js";
 import svg from "./lume/plugins/svg.js";
+import date from "./lume/plugins/date.js";
+
+Deno.env.set("TZ", "Z");
 
 const site = lume({
   prettyUrls: false,
@@ -13,6 +16,7 @@ const site = lume({
 });
 
 site
+  .use(date())
   .use(pug())
   .use(eta())
   .use(bundler())
