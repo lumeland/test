@@ -6,7 +6,7 @@ Deno.test("Search by Tags", () => {
 
   assertEquals(
     "(page) => page.data?.tags?.includes(value0) && page.data?.tags?.includes(value1)",
-    filter.toString()
+    filter.toString(),
   );
 });
 
@@ -15,7 +15,43 @@ Deno.test("Search by Equal", () => {
 
   assertEquals(
     "(page) => page.data?.foo === value0",
-    filter.toString()
+    filter.toString(),
+  );
+});
+
+Deno.test("Search by Upper than", () => {
+  const filter = buildFilter("foo>bar");
+
+  assertEquals(
+    "(page) => page.data?.foo > value0",
+    filter.toString(),
+  );
+});
+
+Deno.test("Search by Upper or equals than", () => {
+  const filter = buildFilter("foo>=bar");
+
+  assertEquals(
+    "(page) => page.data?.foo >= value0",
+    filter.toString(),
+  );
+});
+
+Deno.test("Search by Lower than", () => {
+  const filter = buildFilter("foo<bar");
+
+  assertEquals(
+    "(page) => page.data?.foo < value0",
+    filter.toString(),
+  );
+});
+
+Deno.test("Search by Lower or equals than", () => {
+  const filter = buildFilter("foo<=bar");
+
+  assertEquals(
+    "(page) => page.data?.foo <= value0",
+    filter.toString(),
   );
 });
 
@@ -24,7 +60,7 @@ Deno.test("Search by Not Equal", () => {
 
   assertEquals(
     "(page) => page.data?.foo !== value0",
-    filter.toString()
+    filter.toString(),
   );
 });
 
@@ -33,7 +69,7 @@ Deno.test("Search by Starts With", () => {
 
   assertEquals(
     "(page) => page.data?.foo?.startsWith(value0)",
-    filter.toString()
+    filter.toString(),
   );
 });
 
@@ -42,7 +78,7 @@ Deno.test("Search by Ends With", () => {
 
   assertEquals(
     "(page) => page.data?.foo?.endsWith(value0)",
-    filter.toString()
+    filter.toString(),
   );
 });
 
@@ -51,7 +87,7 @@ Deno.test("Search by Contains", () => {
 
   assertEquals(
     "(page) => page.data?.foo?.includes(value0)",
-    filter.toString()
+    filter.toString(),
   );
 });
 
@@ -60,7 +96,7 @@ Deno.test("Search by Tags with OR", () => {
 
   assertEquals(
     "(page) => value0.some((i) => page.data?.tags?.includes(i))",
-    filter.toString()
+    filter.toString(),
   );
 });
 
@@ -69,7 +105,7 @@ Deno.test("Search by Equal with OR", () => {
 
   assertEquals(
     "(page) => value0.some((i) => page.data?.foo === i)",
-    filter.toString()
+    filter.toString(),
   );
 });
 
@@ -78,7 +114,7 @@ Deno.test("Search by Not Equal with OR", () => {
 
   assertEquals(
     "(page) => value0.some((i) => page.data?.foo !== i)",
-    filter.toString()
+    filter.toString(),
   );
 });
 
@@ -87,7 +123,7 @@ Deno.test("Search by Starts With with OR", () => {
 
   assertEquals(
     "(page) => value0.some((i) => page.data?.foo?.startsWith(i))",
-    filter.toString()
+    filter.toString(),
   );
 });
 
@@ -96,7 +132,7 @@ Deno.test("Search by Ends With with OR", () => {
 
   assertEquals(
     "(page) => value0.some((i) => page.data?.foo?.endsWith(i))",
-    filter.toString()
+    filter.toString(),
   );
 });
 
@@ -105,7 +141,60 @@ Deno.test("Search by Contains with OR", () => {
 
   assertEquals(
     "(page) => value0.some((i) => page.data?.foo?.includes(i))",
-    filter.toString()
+    filter.toString(),
   );
 });
 
+Deno.test("Search Date by Equal", () => {
+  const filter = buildFilter("foo=2000-01-02");
+
+  assertEquals(
+    "(page) => page.data?.foo?.getTime() === value0.getTime()",
+    filter.toString(),
+  );
+});
+
+Deno.test("Search Date by Not Equal", () => {
+  const filter = buildFilter("foo!=2000-01-02");
+
+  assertEquals(
+    "(page) => page.data?.foo?.getTime() !== value0.getTime()",
+    filter.toString(),
+  );
+});
+
+Deno.test("Search Date by lower than", () => {
+  const filter = buildFilter("foo<2000-01-02T18:00");
+
+  assertEquals(
+    "(page) => page.data?.foo?.getTime() < value0.getTime()",
+    filter.toString(),
+  );
+});
+
+Deno.test("Search Date by lower or equals than", () => {
+  const filter = buildFilter("foo<=2000-01-02T18:00");
+
+  assertEquals(
+    "(page) => page.data?.foo?.getTime() <= value0.getTime()",
+    filter.toString(),
+  );
+});
+
+Deno.test("Search Date by upper than", () => {
+  const filter = buildFilter("foo>2000-01-02T18:00");
+
+  assertEquals(
+    "(page) => page.data?.foo?.getTime() > value0.getTime()",
+    filter.toString(),
+  );
+});
+
+Deno.test("Search Date by upper or equals than", () => {
+  const filter = buildFilter("foo>=2000-01-02T18:00");
+
+  assertEquals(
+    "(page) => page.data?.foo?.getTime() >= value0.getTime()",
+    filter.toString(),
+  );
+});
