@@ -1,0 +1,9 @@
+---
+url: 
+  path: _headers
+x_frame: SAMEORIGIN
+x_xss_protection: 1; mode=block
+---
+/templates/index.html
+  X-Frame-Options: {{ x_frame }}
+  X-XSS-Protection: {{ x_xss_protection }}
