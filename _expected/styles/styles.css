@@ -1,6 +1,11 @@
+:root {
+  --color: blue;
+}
+
 body {
   color: green
 }
+
 body p {
     background-color: yellow;
   }

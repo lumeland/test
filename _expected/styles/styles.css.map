@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../styles/styles.css"],"names":[],"mappings":"AAAA;EACE;AAKF;AAHE;IACE,wBAAwB;EAC1B","file":"styles.css","sourcesContent":["body {\n  color: green;\n\n  & p {\n    background-color: yellow;\n  }\n}\n"]}
+{"version":3,"sources":["../../_includes/css/variables.css","../../styles/styles.css"],"names":[],"mappings":"AAAA;EACE,aAAa;AACf;;ACAA;EACE;AAKF;;AAHE;IACE,wBAAwB;EAC1B","file":"styles.css","sourcesContent":[":root {\n  --color: blue;\n}","@import \"variables.css\";\n\nbody {\n  color: green;\n\n  & p {\n    background-color: yellow;\n  }\n}\n"]}

@@ -21,7 +21,10 @@ site
   .use(eta())
   .use(bundler())
   .use(svg())
-  .use(postcss({ sourceMap: true }))
+  .use(postcss({
+    sourceMap: true,
+    includes: ["_includes/css"],
+  }))
   .use(terser({ sourceMap: true }))
   .use(inline());
 
