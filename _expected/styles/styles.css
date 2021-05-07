@@ -8,6 +8,8 @@ body {
 
 body p {
     background-color: yellow;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
 
 /*# sourceMappingURL=styles.css.map */
