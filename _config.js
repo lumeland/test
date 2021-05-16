@@ -34,12 +34,7 @@ site.filter("returnAsync", (text) => Promise.resolve(`${text} (async)`), true);
 
 site.script(
   "multi",
-  "mkdir newdir",
-  "cd newdir",
-  "touch newfile",
-  "ls -al",
-  "cd ..",
-  "rm -rf newdir",
+  "mkdir newdir && cd newdir && touch newfile && ls -al && cd .. && rm -rf newdir",
 );
 
 site.copy("/assets/robots_config", "/robots.txt");

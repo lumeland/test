@@ -1,4 +1,4 @@
-import { assertEquals } from "../lume/deps/asserts.js";
+import { assertEquals } from "./deps.js";
 import { buildFilter } from "../lume/helpers/search.js";
 
 Deno.test("Search by Tags", () => {

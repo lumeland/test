@@ -1,4 +1,4 @@
-import { assert, assertThrows } from "../lume/deps/asserts.js";
+import { assert, assertThrows } from "./deps.js";
 import { validateArgsCount } from "../lume/cli/utils.js";
 
 Deno.test("valid counts don't throw", () => {

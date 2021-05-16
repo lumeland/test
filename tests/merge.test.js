@@ -1,4 +1,4 @@
-import { assertEquals } from "../lume/deps/asserts.js";
+import { assertEquals } from "./deps.js";
 import { merge } from "../lume/utils.js";
 
 Deno.test("Merge options", () => {
