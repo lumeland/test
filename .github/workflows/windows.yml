@@ -20,4 +20,5 @@ jobs:
         run: |
           git clone https://github.com/lumeland/lume.git
           deno test --unstable --allow-read
+          deno run --unstable -A lume/cli.js run multi
           deno run --unstable -A lume/cli.js build
