@@ -7,6 +7,7 @@ import bundler from "./lume/plugins/bundler.js";
 import inline from "./lume/plugins/inline.js";
 import svg from "./lume/plugins/svg.js";
 import date from "./lume/plugins/date.js";
+import code from "./lume/plugins/code_highlight.js";
 
 Deno.env.set("TZ", "Z");
 
@@ -26,7 +27,8 @@ site
     includes: ["_includes/css"],
   }))
   .use(terser({ sourceMap: true }))
-  .use(inline());
+  .use(inline())
+  .use(code());
 
 site.ignore("lume", "tests");
 
