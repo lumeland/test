@@ -18,7 +18,7 @@ Deno.test("url filter (with options)", () => {
   });
 
   assertEquals("http://example2.com/", site.url("http://example2.com"));
-  assertEquals("/bar/bar", site.url("/bar"));
+  assertEquals("/bar", site.url("/bar"));
   assertEquals("/bar/foo", site.url("foo"));
   assertEquals("./foo", site.url("./foo"));
   assertEquals("../foo", site.url("../foo"));
