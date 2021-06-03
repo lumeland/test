@@ -1,1 +1,1 @@
-export const url = (page) => `permalinks/${page.data.title}.html`;
+export const url = (page) => `/permalinks/${page.data.title}.html`;
