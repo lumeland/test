@@ -1,5 +1,5 @@
 import { assertEquals } from "./deps.js";
-import { buildFilter } from "../lume/helpers/search.js";
+import { buildFilter, buildSort } from "../lume/helpers/search.js";
 
 Deno.test("Search by Tags", () => {
   const filter = buildFilter("foo bar");
@@ -196,5 +196,41 @@ Deno.test("Search Date by upper or equals than", () => {
   assertEquals(
     "(page) => page.data?.foo?.getTime() >= value0.getTime()",
     filter.toString(),
+  );
+});
+
+Deno.test("Sort by one field", () => {
+  const sort = buildSort("order");
+
+  assertEquals(
+    "function anonymous(a,b\n) {\nreturn (a.data?.order == b.data?.order ? 0 : (a.data?.order < b.data?.order ? -1 : 1))\n}",
+    sort.toString(),
+  );
+});
+
+Deno.test("Sort by one field DESC", () => {
+  const sort = buildSort("order=desc");
+
+  assertEquals(
+    "function anonymous(a,b\n) {\nreturn (a.data?.order == b.data?.order ? 0 : (a.data?.order > b.data?.order ? -1 : 1))\n}",
+    sort.toString(),
+  );
+});
+
+Deno.test("Sort by two fields", () => {
+  const sort = buildSort("order title");
+
+  assertEquals(
+    "function anonymous(a,b\n) {\nreturn (a.data?.order == b.data?.order ? (a.data?.title == b.data?.title ? 0 : (a.data?.title < b.data?.title ? -1 : 1)) : (a.data?.order < b.data?.order ? -1 : 1))\n}",
+    sort.toString(),
+  );
+});
+
+Deno.test("Sort by two fields, sencod is DESC", () => {
+  const sort = buildSort("order title=desc");
+
+  assertEquals(
+    "function anonymous(a,b\n) {\nreturn (a.data?.order == b.data?.order ? (a.data?.title == b.data?.title ? 0 : (a.data?.title > b.data?.title ? -1 : 1)) : (a.data?.order < b.data?.order ? -1 : 1))\n}",
+    sort.toString(),
   );
 });
