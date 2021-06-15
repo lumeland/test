@@ -3,9 +3,9 @@ import lume from "../lume/mod.js";
 
 Deno.test("attributes filter", () => {
   const site = lume();
-  const [attributes] = site.filters.get("attr");
+  const [attributes] = site.helpers.get("attr");
 
-  assert(site.filters.has("attr"));
+  assert(site.helpers.has("attr"));
 
   assertEquals("one two", attributes(["one", "two"]));
   assertEquals('one="two"', attributes({ one: "two" }));

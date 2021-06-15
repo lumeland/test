@@ -3,9 +3,9 @@ import lume from "../lume/mod.js";
 
 Deno.test("classname filter", () => {
   const site = lume();
-  const [className] = site.filters.get("class");
+  const [className] = site.helpers.get("class");
 
-  assert(site.filters.has("class"));
+  assert(site.helpers.has("class"));
 
   assertEquals("one two", className("one", "two"));
   assertEquals("one", className("one", null));
