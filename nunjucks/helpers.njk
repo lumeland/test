@@ -1,0 +1,21 @@
+---
+title: The title
+---
+<h1>{% upperCase title %}</h1>
+<h1>{% upperCase "title" %}</h1>
+<h1>{% upperCaseAsync title %}</h1>
+<h1>{% upperCaseAsync "title async" %}</h1>
+
+{% upperCaseBody %}
+  Hello world body
+{% endupperCaseBody %}
+
+{% upperCaseBody %}
+  {{ title }}
+{% endupperCaseBody %}
+
+{% upperCaseAsync title %}
+
+{% upperCaseBodyAsync %}
+  Hello world body async
+{% endupperCaseBodyAsync %}

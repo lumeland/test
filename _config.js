@@ -34,6 +34,11 @@ site.ignore("lume", "tests");
 
 site.filter("returnAsync", (text) => Promise.resolve(`${text} (async)`), true);
 
+site.helper("upperCase", (text) => text.toUpperCase(), { type: "tag" });
+site.helper("upperCaseBody", (text) => text.toUpperCase(), { type: "tag", body: true });
+site.helper("upperCaseAsync", async (text) => text.toUpperCase(), { type: "tag", async: true });
+site.helper("upperCaseBodyAsync", async (text) => text.toUpperCase(), { type: "tag", body: true, async: true });
+
 site.script(
   "multi",
   "mkdir newdir && cd newdir && touch newfile && ls -al && cd .. && rm -rf newdir",
