@@ -9,6 +9,7 @@ import svg from "./lume/plugins/svg.js";
 import date from "./lume/plugins/date.js";
 import code from "./lume/plugins/code_highlight.js";
 import slugify from "./lume/plugins/slugify_urls.js";
+import attributes from "./lume/plugins/attributes.js";
 
 Deno.env.set("TZ", "Z");
 
@@ -30,6 +31,7 @@ site
   .use(terser({ sourceMap: true }))
   .use(inline())
   .use(slugify())
+  .use(attributes())
   .use(code());
 
 site.ignore("lume", "tests");

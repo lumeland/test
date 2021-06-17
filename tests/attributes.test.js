@@ -1,8 +1,9 @@
 import { assert, assertEquals } from "./deps.js";
 import lume from "../lume/mod.js";
+import attr from "../lume/plugins/attributes.js";
 
 Deno.test("attributes filter", () => {
-  const site = lume();
+  const site = lume().use(attr());
   const [attributes] = site.helpers.get("attr");
 
   assert(site.helpers.has("attr"));
