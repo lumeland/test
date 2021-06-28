@@ -1,5 +1,5 @@
 import { assertEquals } from "./deps.js";
-import { merge } from "../lume/utils.js";
+import { merge } from "../lume/utils.ts";
 
 Deno.test("Merge options", () => {
   const defaults = {
