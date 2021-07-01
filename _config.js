@@ -38,10 +38,10 @@ site.ignore("lume", "tests");
 
 site.filter("returnAsync", (text) => Promise.resolve(`${text} (async)`), true);
 
-site.helper("upperCase", (text) => text.toUpperCase(), { type: "tag" });
-site.helper("upperCaseBody", (text) => text.toUpperCase(), { type: "tag", body: true });
-site.helper("upperCaseAsync", async (text) => text.toUpperCase(), { type: "tag", async: true });
-site.helper("upperCaseBodyAsync", async (text) => text.toUpperCase(), { type: "tag", body: true, async: true });
+site.helper("upperCase", (text) => `<strong>${text.toUpperCase()}</strong>`, { type: "tag" });
+site.helper("upperCaseBody", (text) => `<strong>${text.toUpperCase()}</strong>`, { type: "tag", body: true });
+site.helper("upperCaseAsync", async (text) => `<strong>${text.toUpperCase()}</strong>`, { type: "tag", async: true });
+site.helper("upperCaseBodyAsync", async (text) => `<strong>${text.toUpperCase()}</strong>`, { type: "tag", body: true, async: true });
 
 site.script(
   "multi",
