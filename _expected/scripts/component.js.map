@@ -1,1 +1,1 @@
-{"version":3,"sources":["/scripts/component.js"],"names":["Component","[object Object]","data","this"],"mappings":"eAAe,MAAMA,EACjBC,YAAYC,GACRC,KAAKD,KAAOA","file":"/scripts/component.js"}
+{"version":3,"sources":["/scripts/component.js"],"names":["Component","constructor","data","this"],"mappings":"eAAe,MAAMA,EACjBC,YAAYC,GACRC,KAAKD,KAAOA","file":"/scripts/component.js"}
