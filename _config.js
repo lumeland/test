@@ -1,15 +1,15 @@
 import lume from "./lume/mod.js";
-import pug from "./lume/plugins/pug.js";
-import eta from "./lume/plugins/eta.js";
-import postcss from "./lume/plugins/postcss.js";
-import terser from "./lume/plugins/terser.js";
-import bundler from "./lume/plugins/bundler.js";
-import inline from "./lume/plugins/inline.js";
-import svg from "./lume/plugins/svg.js";
-import date from "./lume/plugins/date.js";
-import code from "./lume/plugins/code_highlight.js";
-import slugify from "./lume/plugins/slugify_urls.js";
-import attributes from "./lume/plugins/attributes.js";
+import pug from "./lume/plugins/pug.ts";
+import eta from "./lume/plugins/eta.ts";
+import postcss from "./lume/plugins/postcss.ts";
+import terser from "./lume/plugins/terser.ts";
+import bundler from "./lume/plugins/bundler.ts";
+import inline from "./lume/plugins/inline.ts";
+import svg from "./lume/plugins/svgo.ts";
+import date from "./lume/plugins/date.ts";
+import code from "./lume/plugins/code_highlight.ts";
+import slugify from "./lume/plugins/slugify_urls.ts";
+import attributes from "./lume/plugins/attributes.ts";
 
 Deno.env.set("TZ", "Z");
 
