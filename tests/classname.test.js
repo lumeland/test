@@ -1,5 +1,5 @@
 import { assert, assertEquals } from "./deps.js";
-import lume from "../lume/mod.js";
+import lume from "../lume/mod.ts";
 import attr from "../lume/plugins/attributes.ts";
 
 Deno.test("classname filter", () => {

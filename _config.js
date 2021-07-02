@@ -1,4 +1,4 @@
-import lume from "./lume/mod.js";
+import lume from "./lume/mod.ts";
 import pug from "./lume/plugins/pug.ts";
 import eta from "./lume/plugins/eta.ts";
 import postcss from "./lume/plugins/postcss.ts";

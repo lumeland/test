@@ -1,5 +1,5 @@
 import { assertEquals } from "./deps.js";
-import lume from "../lume/mod.js";
+import lume from "../lume/mod.ts";
 
 Deno.test("url filter (without options)", () => {
   const site = lume();
