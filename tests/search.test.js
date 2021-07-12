@@ -1,5 +1,5 @@
 import { assertEquals } from "./deps.js";
-import { buildFilter, buildSort } from "../lume/helpers/search.ts";
+import { buildFilter, buildSort } from "../lume/core/helpers/search.ts";
 
 Deno.test("Search by Tags", () => {
   const filter = buildFilter("foo bar");
